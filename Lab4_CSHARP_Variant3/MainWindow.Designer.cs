@@ -1,6 +1,6 @@
 ﻿namespace Lab4_CSHARP_Variant3
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
