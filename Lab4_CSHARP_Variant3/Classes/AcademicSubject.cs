@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Lab4_CSHARP_Variant3
+﻿namespace Lab4_CSHARP_Variant3.Classes
 {
     public class AcademicSubject
     {

@@ -1,28 +1,37 @@
 ﻿using System.Collections.Generic;
 
-namespace Lab4_CSHARP_Variant3
+namespace Lab4_CSHARP_Variant3.Classes
 {
     public class Student
     {
-        private string FullName { get; set; }
+        private string Surname { get; set; }
+        private string Name { get; set; }
         private List<AcademicSubject> AcademicSubjects { get; set; }
 
         public Student()
         {
-            FullName = string.Empty;
+            Surname = string.Empty;
+            Name = string.Empty;
             AcademicSubjects = new List<AcademicSubject>();
         }
 
-        public Student(string fullName, List<AcademicSubject> academicSubjects)
+        public Student(string surname, string name, List<AcademicSubject> academicSubjects)
         {
-            this.FullName = fullName;
+            this.Surname = surname;
+            this.Name = name;
             this.AcademicSubjects = academicSubjects;
         }
 
-        public string GetSetFullName
+        public string GetSetSurname
         {
-            get => FullName;
-            set => FullName = value;
+            get => Surname;
+            set => Surname = value;
+        }
+        
+        public string GetSetName
+        {
+            get => Name;
+            set => Name = value;
         }
 
         public List<AcademicSubject> GetAcademicSubjects => AcademicSubjects;
