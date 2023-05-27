@@ -38,6 +38,7 @@
             this.buttonChangeInfoAboutStudent = new System.Windows.Forms.Button();
             this.buttonChangeGrade = new System.Windows.Forms.Button();
             this.buttonChangeSubjectName = new System.Windows.Forms.Button();
+            this.buttonAddStudentToSubject = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonAddSubject
@@ -58,6 +59,7 @@
             this.buttonAddStudent.TabIndex = 1;
             this.buttonAddStudent.Text = "Додати студента";
             this.buttonAddStudent.UseVisualStyleBackColor = true;
+            this.buttonAddStudent.Click += new System.EventHandler(this.buttonAddStudent_Click);
             // 
             // buttonListSubjects
             // 
@@ -88,6 +90,7 @@
             this.buttonRemoveSubject.TabIndex = 4;
             this.buttonRemoveSubject.Text = "Видалити предмет";
             this.buttonRemoveSubject.UseVisualStyleBackColor = true;
+            this.buttonRemoveSubject.Click += new System.EventHandler(this.buttonRemoveSubject_Click);
             // 
             // buttonDeleteStudent
             // 
@@ -98,6 +101,7 @@
             this.buttonDeleteStudent.TabIndex = 5;
             this.buttonDeleteStudent.Text = "Відрахувати студента";
             this.buttonDeleteStudent.UseVisualStyleBackColor = true;
+            this.buttonDeleteStudent.Click += new System.EventHandler(this.buttonDeleteStudent_Click);
             // 
             // buttonChangeInfoAboutStudent
             // 
@@ -129,12 +133,23 @@
             this.buttonChangeSubjectName.Text = "Змінити назву предмета";
             this.buttonChangeSubjectName.UseVisualStyleBackColor = true;
             // 
+            // buttonAddStudentToSubject
+            // 
+            this.buttonAddStudentToSubject.Enabled = false;
+            this.buttonAddStudentToSubject.Location = new System.Drawing.Point(171, 315);
+            this.buttonAddStudentToSubject.Name = "buttonAddStudentToSubject";
+            this.buttonAddStudentToSubject.Size = new System.Drawing.Size(153, 95);
+            this.buttonAddStudentToSubject.TabIndex = 9;
+            this.buttonAddStudentToSubject.Text = "Зарахувати студента на курс";
+            this.buttonAddStudentToSubject.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 321);
+            this.ClientSize = new System.Drawing.Size(495, 421);
+            this.Controls.Add(this.buttonAddStudentToSubject);
             this.Controls.Add(this.buttonChangeSubjectName);
             this.Controls.Add(this.buttonChangeGrade);
             this.Controls.Add(this.buttonChangeInfoAboutStudent);
@@ -147,13 +162,15 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(511, 360);
-            this.MinimumSize = new System.Drawing.Size(511, 360);
+            this.MaximumSize = new System.Drawing.Size(511, 460);
+            this.MinimumSize = new System.Drawing.Size(511, 460);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button buttonAddStudentToSubject;
 
         private System.Windows.Forms.Button buttonChangeGrade;
         private System.Windows.Forms.Button buttonChangeSubjectName;

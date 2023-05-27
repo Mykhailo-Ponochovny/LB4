@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Windows.Forms;
 
 using Lab4_CSHARP_Variant3.Classes;
@@ -35,7 +34,7 @@ namespace Lab4_CSHARP_Variant3.Windows
 
             if (_students.Count > 0 && _academicSubjects.Count > 0)
             {
-                bool checkGrade = Functions.FildGrade(_students);
+                var checkGrade = Functions.FildGrade(_students);
                 if (checkGrade)
                     buttonChangeGrade.Enabled = true;
             }
@@ -51,6 +50,57 @@ namespace Lab4_CSHARP_Variant3.Windows
                 buttonListSubjects.Enabled = true;
                 buttonRemoveSubject.Enabled = true;
                 buttonChangeSubjectName.Enabled = true;
+            }
+            
+            if (_students.Count > 0 && _academicSubjects.Count > 0)
+                buttonAddStudentToSubject.Enabled = true;
+        }
+
+        private void buttonAddStudent_Click(object sender, EventArgs e)
+        {
+            var addStudentDialog = new AddStudentDialog();
+            addStudentDialog.ShowDialog();
+            if (addStudentDialog.newStudent != null)
+            {
+                _students.Add(addStudentDialog.newStudent);
+                buttonInfoAboutStudent.Enabled = true;
+                buttonDeleteStudent.Enabled = true;
+                buttonChangeInfoAboutStudent.Enabled = true;
+            }
+
+            if (_students.Count > 0 && _academicSubjects.Count > 0)
+                buttonAddStudentToSubject.Enabled = true;
+        }
+
+        private void buttonRemoveSubject_Click(object sender, EventArgs e)
+        {
+            var deleteSubjectDialog = new DeleteSubjectDialog(_academicSubjects, _students);
+            deleteSubjectDialog.ShowDialog();
+            if (_academicSubjects.Count == 0)
+            {
+                buttonRemoveSubject.Enabled = false;
+                buttonChangeGrade.Enabled = false;
+                buttonChangeSubjectName.Enabled = false;
+                buttonListSubjects.Enabled = false;
+            }
+            else
+            {
+                if (!Functions.FildGrade(_students))
+                    buttonChangeGrade.Enabled = false;
+            }
+        }
+
+        private void buttonDeleteStudent_Click(object sender, EventArgs e)
+        {
+            DeleteStudentDialog deleteStudentDialog = new DeleteStudentDialog(_students);
+            deleteStudentDialog.ShowDialog();
+            if (_students.Count == 0)
+            {
+                buttonDeleteStudent.Enabled = false;
+                buttonInfoAboutStudent.Enabled = false;
+                buttonChangeInfoAboutStudent.Enabled = false;
+                buttonChangeGrade.Enabled = false;
+                buttonAddStudentToSubject.Enabled = false;
             }
         }
     }

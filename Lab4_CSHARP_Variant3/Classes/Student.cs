@@ -41,9 +41,15 @@ namespace Lab4_CSHARP_Variant3.Classes
             set => AcademicSubjects.Add(value);
         }
 
-        public void RemoveAcademicSubject(AcademicSubject academicSubject)
+        public void RemoveAcademicSubject(string academicSubjectName)
         {
-            AcademicSubjects.Remove(academicSubject);
+            if (AcademicSubjects.Count > 0)
+            {
+                var findSubject = AcademicSubjects.Find(
+                    s => s.GetSetSubjectName.Equals(academicSubjectName));
+                if (findSubject != null)
+                    AcademicSubjects.Remove(findSubject);
+            }
         }
     }
 }
