@@ -54,5 +54,22 @@ namespace Lab4_CSHARP_Variant3.Classes
         {
             return students.Select(student => student.GetAcademicSubjects).Any(getAcademicSubjects => getAcademicSubjects.Count > 0);
         }
+        
+        //find subject in student subjects
+        public static bool FindSubject(Student student, string subjectName)
+        {
+            var result = false;
+
+            var studentSubjects = student.GetAcademicSubjects;
+
+            if (studentSubjects.Count > 0)
+            {
+                var findSubject = studentSubjects.Find(s => s.GetSetSubjectName.Equals(subjectName));
+                if (findSubject != null)
+                    result = true;
+            }
+            
+            return result;
+        }
     }
 }

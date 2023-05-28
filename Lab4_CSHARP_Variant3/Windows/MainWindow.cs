@@ -82,6 +82,7 @@ namespace Lab4_CSHARP_Variant3.Windows
                 buttonChangeGrade.Enabled = false;
                 buttonChangeSubjectName.Enabled = false;
                 buttonListSubjects.Enabled = false;
+                buttonAddStudentToSubject.Enabled = false;
             }
             else
             {
@@ -139,7 +140,16 @@ namespace Lab4_CSHARP_Variant3.Windows
 
         private void buttonChangeSubjectName_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            var changeSubjectNameDialog = new ChangeSubjectNameDialog(_academicSubjects);
+            changeSubjectNameDialog.ShowDialog();
+        }
+
+        private void buttonAddStudentToSubject_Click(object sender, EventArgs e)
+        {
+            var addStudentToSubjectDialog = new AddStudentToSubjectDialog(_students, _academicSubjects);
+            addStudentToSubjectDialog.ShowDialog();
+            if (Functions.FildGrade(_students))
+                buttonChangeGrade.Enabled = true;
         }
     }
 }

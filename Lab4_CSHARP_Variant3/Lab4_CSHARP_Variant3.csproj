@@ -86,6 +86,12 @@
         <Compile Include="Windows\AddStudentDialog.Designer.cs">
           <DependentUpon>AddStudentDialog.cs</DependentUpon>
         </Compile>
+        <Compile Include="Windows\AddStudentToSubjectDialog.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Windows\AddStudentToSubjectDialog.Designer.cs">
+          <DependentUpon>AddStudentToSubjectDialog.cs</DependentUpon>
+        </Compile>
         <Compile Include="Windows\AddSubjectDialog.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -97,6 +103,12 @@
         </Compile>
         <Compile Include="Windows\ChangeInfoAboutStudentDialog.Designer.cs">
           <DependentUpon>ChangeInfoAboutStudentDialog.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Windows\ChangeSubjectNameDialog.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Windows\ChangeSubjectNameDialog.Designer.cs">
+          <DependentUpon>ChangeSubjectNameDialog.cs</DependentUpon>
         </Compile>
         <Compile Include="Windows\DeleteStudentDialog.cs">
           <SubType>Form</SubType>
@@ -146,11 +158,17 @@
         <EmbeddedResource Include="Windows\AddStudentDialog.resx">
           <DependentUpon>AddStudentDialog.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="Windows\AddStudentToSubjectDialog.resx">
+          <DependentUpon>AddStudentToSubjectDialog.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Windows\AddSubjectDialog.resx">
           <DependentUpon>AddSubjectDialog.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Windows\ChangeInfoAboutStudentDialog.resx">
           <DependentUpon>ChangeInfoAboutStudentDialog.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Windows\ChangeSubjectNameDialog.resx">
+          <DependentUpon>ChangeSubjectNameDialog.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Windows\DeleteStudentDialog.resx">
           <DependentUpon>DeleteStudentDialog.cs</DependentUpon>

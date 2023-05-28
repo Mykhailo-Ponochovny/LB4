@@ -147,6 +147,7 @@
             this.buttonAddStudentToSubject.TabIndex = 9;
             this.buttonAddStudentToSubject.Text = "Зарахувати студента на курс";
             this.buttonAddStudentToSubject.UseVisualStyleBackColor = true;
+            this.buttonAddStudentToSubject.Click += new System.EventHandler(this.buttonAddStudentToSubject_Click);
             // 
             // MainWindow
             // 
