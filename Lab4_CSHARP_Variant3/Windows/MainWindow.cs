@@ -111,5 +111,35 @@ namespace Lab4_CSHARP_Variant3.Windows
             listSubjectsWindow.ShowDialog();
             this.Show();
         }
+
+        private void buttonInfoAboutStudent_Click(object sender, EventArgs e)
+        {
+            var selectStudentDialog = new SelectStudentDialog(_students);
+            selectStudentDialog.ShowDialog();
+            var infoAboutStudentWindow = new InfoAboutStudentWindow(_students[selectStudentDialog.StudentIndex]);
+            this.Hide();
+            infoAboutStudentWindow.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonChangeInfoAboutStudent_Click(object sender, EventArgs e)
+        {
+            var selectStudentDialog = new SelectStudentDialog(_students);
+            selectStudentDialog.ShowDialog();
+            var changeInfoAboutStudentDialog =
+                new ChangeInfoAboutStudentDialog(_students[selectStudentDialog.StudentIndex]);
+            changeInfoAboutStudentDialog.ShowDialog();
+        }
+
+        private void buttonChangeGrade_Click(object sender, EventArgs e)
+        {
+            var selectStudentDialog = new SelectStudentDialog(_students);
+            selectStudentDialog.ShowDialog();
+        }
+
+        private void buttonChangeSubjectName_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

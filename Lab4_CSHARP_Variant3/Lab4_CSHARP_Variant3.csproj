@@ -92,6 +92,12 @@
         <Compile Include="Windows\AddSubjectDialog.Designer.cs">
           <DependentUpon>AddSubjectDialog.cs</DependentUpon>
         </Compile>
+        <Compile Include="Windows\ChangeInfoAboutStudentDialog.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Windows\ChangeInfoAboutStudentDialog.Designer.cs">
+          <DependentUpon>ChangeInfoAboutStudentDialog.cs</DependentUpon>
+        </Compile>
         <Compile Include="Windows\DeleteStudentDialog.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -104,6 +110,12 @@
         <Compile Include="Windows\DeleteSubjectDialog.Designer.cs">
           <DependentUpon>DeleteSubjectDialog.cs</DependentUpon>
         </Compile>
+        <Compile Include="Windows\InfoAboutStudentWindow.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Windows\InfoAboutStudentWindow.Designer.cs">
+          <DependentUpon>InfoAboutStudentWindow.cs</DependentUpon>
+        </Compile>
         <Compile Include="Windows\ListSubjectsWindow.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -115,6 +127,12 @@
         </Compile>
         <Compile Include="Windows\MainWindow.Designer.cs">
           <DependentUpon>MainWindow.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Windows\SelectStudentDialog.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Windows\SelectStudentDialog.Designer.cs">
+          <DependentUpon>SelectStudentDialog.cs</DependentUpon>
         </Compile>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
@@ -131,17 +149,26 @@
         <EmbeddedResource Include="Windows\AddSubjectDialog.resx">
           <DependentUpon>AddSubjectDialog.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="Windows\ChangeInfoAboutStudentDialog.resx">
+          <DependentUpon>ChangeInfoAboutStudentDialog.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Windows\DeleteStudentDialog.resx">
           <DependentUpon>DeleteStudentDialog.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Windows\DeleteSubjectDialog.resx">
           <DependentUpon>DeleteSubjectDialog.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="Windows\InfoAboutStudentWindow.resx">
+          <DependentUpon>InfoAboutStudentWindow.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Windows\ListSubjectsWindow.resx">
           <DependentUpon>ListSubjectsWindow.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Windows\MainWindow.resx">
           <DependentUpon>MainWindow.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Windows\SelectStudentDialog.resx">
+          <DependentUpon>SelectStudentDialog.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="packages.config" />
         <None Include="Properties\Settings.settings">

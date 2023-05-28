@@ -81,6 +81,7 @@
             this.buttonInfoAboutStudent.TabIndex = 3;
             this.buttonInfoAboutStudent.Text = "Інформація про студента";
             this.buttonInfoAboutStudent.UseVisualStyleBackColor = true;
+            this.buttonInfoAboutStudent.Click += new System.EventHandler(this.buttonInfoAboutStudent_Click);
             // 
             // buttonRemoveSubject
             // 
@@ -113,6 +114,7 @@
             this.buttonChangeInfoAboutStudent.TabIndex = 6;
             this.buttonChangeInfoAboutStudent.Text = "Змінити інформацію про студента";
             this.buttonChangeInfoAboutStudent.UseVisualStyleBackColor = true;
+            this.buttonChangeInfoAboutStudent.Click += new System.EventHandler(this.buttonChangeInfoAboutStudent_Click);
             // 
             // buttonChangeGrade
             // 
@@ -123,6 +125,7 @@
             this.buttonChangeGrade.TabIndex = 7;
             this.buttonChangeGrade.Text = "Змінити оцінку студента";
             this.buttonChangeGrade.UseVisualStyleBackColor = true;
+            this.buttonChangeGrade.Click += new System.EventHandler(this.buttonChangeGrade_Click);
             // 
             // buttonChangeSubjectName
             // 
@@ -133,6 +136,7 @@
             this.buttonChangeSubjectName.TabIndex = 8;
             this.buttonChangeSubjectName.Text = "Змінити назву предмета";
             this.buttonChangeSubjectName.UseVisualStyleBackColor = true;
+            this.buttonChangeSubjectName.Click += new System.EventHandler(this.buttonChangeSubjectName_Click);
             // 
             // buttonAddStudentToSubject
             // 
