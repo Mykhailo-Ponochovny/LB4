@@ -103,5 +103,13 @@ namespace Lab4_CSHARP_Variant3.Windows
                 buttonAddStudentToSubject.Enabled = false;
             }
         }
+
+        private void buttonListSubjects_Click(object sender, EventArgs e)
+        {
+            var listSubjectsWindow = new ListSubjectsWindow(_academicSubjects);
+            this.Hide();
+            listSubjectsWindow.ShowDialog();
+            this.Show();
+        }
     }
 }

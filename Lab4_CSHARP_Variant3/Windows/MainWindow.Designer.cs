@@ -70,6 +70,7 @@
             this.buttonListSubjects.TabIndex = 2;
             this.buttonListSubjects.Text = "Список предметів";
             this.buttonListSubjects.UseVisualStyleBackColor = true;
+            this.buttonListSubjects.Click += new System.EventHandler(this.buttonListSubjects_Click);
             // 
             // buttonInfoAboutStudent
             // 

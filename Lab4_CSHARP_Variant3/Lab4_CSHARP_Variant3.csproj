@@ -104,6 +104,12 @@
         <Compile Include="Windows\DeleteSubjectDialog.Designer.cs">
           <DependentUpon>DeleteSubjectDialog.cs</DependentUpon>
         </Compile>
+        <Compile Include="Windows\ListSubjectsWindow.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Windows\ListSubjectsWindow.Designer.cs">
+          <DependentUpon>ListSubjectsWindow.cs</DependentUpon>
+        </Compile>
         <Compile Include="Windows\MainWindow.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -130,6 +136,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="Windows\DeleteSubjectDialog.resx">
           <DependentUpon>DeleteSubjectDialog.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Windows\ListSubjectsWindow.resx">
+          <DependentUpon>ListSubjectsWindow.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Windows\MainWindow.resx">
           <DependentUpon>MainWindow.cs</DependentUpon>
