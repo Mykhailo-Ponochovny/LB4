@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 using Lab4_CSHARP_Variant3.Classes;
@@ -37,16 +38,16 @@ namespace Lab4_CSHARP_Variant3.Windows
                 var checkGrade = Functions.FildGrade(_students);
                 if (checkGrade)
                     buttonChangeGrade.Enabled = true;
+                buttonAddStudentToSubject.Enabled = true;
             }
         }
 
         private void buttonAddSubject_Click(object sender, EventArgs e)
         {
-            var addSubjectDialog = new AddSubjectDialog();
+            var addSubjectDialog = new AddSubjectDialog(_academicSubjects);
             addSubjectDialog.ShowDialog();
-            if (addSubjectDialog.newAcademicSubject != null)
+            if (_academicSubjects.Count > 0)
             {
-                _academicSubjects.Add(addSubjectDialog.newAcademicSubject);
                 buttonListSubjects.Enabled = true;
                 buttonRemoveSubject.Enabled = true;
                 buttonChangeSubjectName.Enabled = true;
@@ -134,8 +135,8 @@ namespace Lab4_CSHARP_Variant3.Windows
 
         private void buttonChangeGrade_Click(object sender, EventArgs e)
         {
-            var selectStudentDialog = new SelectStudentDialog(_students);
-            selectStudentDialog.ShowDialog();
+            var changeStudentGradeDialog = new ChangeStudentGradeDialog(_students);
+            changeStudentGradeDialog.ShowDialog();
         }
 
         private void buttonChangeSubjectName_Click(object sender, EventArgs e)
@@ -150,6 +151,19 @@ namespace Lab4_CSHARP_Variant3.Windows
             addStudentToSubjectDialog.ShowDialog();
             if (Functions.FildGrade(_students))
                 buttonChangeGrade.Enabled = true;
+        }
+        
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Ви дійсно бажаєте завершити роботу?", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialog == DialogResult.Yes)
+            {
+                Functions.SerializeStudentsJson(_students);
+                Functions.SerializeSubjectsJson(_academicSubjects);
+                e.Cancel = false;
+            }
+            else
+                e.Cancel = true;
         }
     }
 }

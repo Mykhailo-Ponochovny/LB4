@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using Lab4_CSHARP_Variant3.Classes;
 
@@ -6,9 +7,10 @@ namespace Lab4_CSHARP_Variant3.Windows
 {
     public partial class AddSubjectDialog : Form
     {
-        public AcademicSubject newAcademicSubject;
-        public AddSubjectDialog()
+        private List<AcademicSubject> _academicSubjects;
+        internal AddSubjectDialog(List<AcademicSubject> academicSubjects)
         {
+            _academicSubjects = academicSubjects;
             InitializeComponent();
         }
 
@@ -23,8 +25,15 @@ namespace Lab4_CSHARP_Variant3.Windows
                 MessageBox.Show("Вкажіть назву предмета!", "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                newAcademicSubject = new AcademicSubject(textBoxSubjectName.Text, 0);
-                this.Close();
+                var findSubject = _academicSubjects.Find(s => s.GetSetSubjectName.Equals(textBoxSubjectName.Text));
+                if (findSubject == null)
+                {
+                    var newAcademicSubject = new AcademicSubject(textBoxSubjectName.Text, 0);
+                    _academicSubjects.Add(newAcademicSubject);
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("Цей предмет вже записаний!", "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

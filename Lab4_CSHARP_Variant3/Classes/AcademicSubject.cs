@@ -2,8 +2,8 @@
 {
     public class AcademicSubject
     {
-        private string SubjectName { get; set; }
-        private int Grade { get; set; }
+        public string SubjectName { get; set; }
+        public int Grade { get; set; }
 
         public AcademicSubject()
         {

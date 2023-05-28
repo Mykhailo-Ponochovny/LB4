@@ -4,9 +4,9 @@ namespace Lab4_CSHARP_Variant3.Classes
 {
     public class Student
     {
-        private string Surname { get; set; }
-        private string Name { get; set; }
-        private List<AcademicSubject> AcademicSubjects { get; set; }
+        public string Surname { get; set; }
+        public string Name { get; set; }
+        public List<AcademicSubject> AcademicSubjects { get; set; }
 
         public Student()
         {
@@ -35,6 +35,11 @@ namespace Lab4_CSHARP_Variant3.Classes
         }
 
         public List<AcademicSubject> GetAcademicSubjects => AcademicSubjects;
+
+        public List<AcademicSubject> SetAcademicSubjects
+        {
+            set => AcademicSubjects = value;
+        }
 
         public AcademicSubject AddAcademicSubjects
         {

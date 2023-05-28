@@ -104,6 +104,12 @@
         <Compile Include="Windows\ChangeInfoAboutStudentDialog.Designer.cs">
           <DependentUpon>ChangeInfoAboutStudentDialog.cs</DependentUpon>
         </Compile>
+        <Compile Include="Windows\ChangeStudentGradeDialog.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Windows\ChangeStudentGradeDialog.Designer.cs">
+          <DependentUpon>ChangeStudentGradeDialog.cs</DependentUpon>
+        </Compile>
         <Compile Include="Windows\ChangeSubjectNameDialog.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -166,6 +172,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="Windows\ChangeInfoAboutStudentDialog.resx">
           <DependentUpon>ChangeInfoAboutStudentDialog.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Windows\ChangeStudentGradeDialog.resx">
+          <DependentUpon>ChangeStudentGradeDialog.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Windows\ChangeSubjectNameDialog.resx">
           <DependentUpon>ChangeSubjectNameDialog.cs</DependentUpon>
