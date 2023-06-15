@@ -3,11 +3,10 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 
-namespace Lab4_CSHARP_Variant3.Classes
+namespace Lab4_CSHARP.Classes
 {
     public class Functions
     {
-        //serialize and deserialize students
         public static void SerializeStudentsJson(List<Student> students)
         {
             if (!Directory.Exists("data"))
@@ -28,7 +27,6 @@ namespace Lab4_CSHARP_Variant3.Classes
             return result;
         }
 
-        //serialize and deserialize subjects
         public static void SerializeSubjectsJson(List<AcademicSubject> academicSubjects)
         {
             if (!Directory.Exists("data"))
@@ -49,13 +47,11 @@ namespace Lab4_CSHARP_Variant3.Classes
             return result;
         }
         
-        //find grade in students list
         public static bool FildGrade(List<Student> students)
         {
             return students.Select(student => student.GetAcademicSubjects).Any(getAcademicSubjects => getAcademicSubjects.Count > 0);
         }
         
-        //find subject in student subjects
         public static bool FindSubject(Student student, string subjectName)
         {
             var result = false;

@@ -1,4 +1,4 @@
-﻿namespace Lab4_CSHARP_Variant3.Classes
+﻿namespace Lab4_CSHARP.Classes
 {
     public class AcademicSubject
     {

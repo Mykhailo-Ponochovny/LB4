@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Lab4_CSHARP_Variant3.Windows;
+using Lab4_CSHARP.Windows;
 
-namespace Lab4_CSHARP_Variant3
+namespace Lab4_CSHARP
 {
     static class Program
     {

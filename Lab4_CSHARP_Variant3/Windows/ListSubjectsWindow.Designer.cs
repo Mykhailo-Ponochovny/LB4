@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Lab4_CSHARP_Variant3.Windows
+namespace Lab4_CSHARP.Windows
 {
     partial class ListSubjectsWindow
     {

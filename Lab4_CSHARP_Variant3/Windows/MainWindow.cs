@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-using Lab4_CSHARP_Variant3.Classes;
+using Lab4_CSHARP.Classes;
 
-namespace Lab4_CSHARP_Variant3.Windows
+namespace Lab4_CSHARP.Windows
 {
     public partial class MainWindow : Form
     {
